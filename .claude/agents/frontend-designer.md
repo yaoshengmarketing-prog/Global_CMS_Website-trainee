@@ -26,7 +26,7 @@ Make AI Token Global look intentional and high-craft, and keep it consistent acr
 - **Spacing:** intentional, consistent tokens — not random Tailwind steps.
 
 ## Brand Assets
-Always check `brand_assets/` first. The project has `AI_Token_logoPNG.avif` at repo root. If a logo or palette exists, use the real asset — never a placeholder where a real asset is available, never invent brand colors.
+Check for real brand assets before designing. In this repo the logo is `AI_Token_logoPNG.avif` at the repo root (and in `public/`); a dedicated `brand_assets/` folder may not exist here even though `CLAUDE.md` references one — if it does, use it. Always prefer the real asset over a placeholder, and never invent brand colors.
 
 ## Responsive System (Astro project — from CLAUDE.md)
 - Breakpoints live in `src/styles/global.css`: **1024px** (mobile→desktop nav), **900px** (grids collapse), **640px** (single column, footer stacks). Use these, not arbitrary one-offs.
@@ -38,8 +38,8 @@ Always check `brand_assets/` first. The project has `AI_Token_logoPNG.avif` at r
 
 ## Screenshot / Verify Workflow (from CLAUDE.md)
 - **Always serve on localhost** — never screenshot a `file:///` URL. Astro dev: `npm run dev` → `http://localhost:4321`. Start it in the background before screenshots; don't start a second instance if one is running.
-- Screenshot: `node screenshot.mjs http://localhost:4321/en/page label` → saved to `./temporary screenshots/`.
-- The Read tool does **not** render PNGs. Audit programmatically with Puppeteer `page.evaluate()` to inspect DOM/classes/styles/hrefs.
+- Screenshot via the project harness *if present*: `node screenshot.mjs http://localhost:4321/en/page label` → saved to `./temporary screenshots/`. **Note:** `screenshot.mjs`/`serve.mjs` and a local `puppeteer` install are described in `CLAUDE.md` but may not exist in this environment yet — if the harness is absent, set it up (or use Playwright, which is preinstalled here) rather than assuming it works.
+- The Read tool does **not** render PNGs. Audit programmatically with `page.evaluate()` to inspect DOM/classes/styles/hrefs.
 - When comparing, be specific: "heading is 32px but reference shows ~24px", "card gap 16px, should be 24px". Check spacing, font size/weight/line-height, exact hex colors, alignment, radius, shadows, image sizing.
 - Do at least 2 comparison rounds. Stop only when no visible differences remain or the user says so.
 

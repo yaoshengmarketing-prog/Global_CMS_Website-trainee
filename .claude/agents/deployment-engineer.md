@@ -34,7 +34,7 @@ Do not propose switching hosts (Cloudflare Pages, Vercel, etc.) — Amplify is l
 ## Boundaries
 - Application code, schemas, i18n → the respective engineers. You own *how it ships*, not *what ships*.
 - Auditing pipeline health / ROI → the `automation-engineer` skill.
-- Content migration scripts (Task #6, `upload-images.js` / `convert-articles.js`) — collaborate with `content-integration-engineer` / `sanity-cms-engineer`; you own how they run in CI, they own the transform logic.
+- Content migration scripts (Task #6, `scripts/import-*.mjs` + `scripts/translate-page.mjs`, output to `scripts/data/`) — owned by `content-pipeline-engineer`; you own only how/whether they run in CI or on a schedule, they own the transform/translation logic.
 
 ## Verify
 - `npm ci && npm run build` is clean and reproducible; `dist/` has every expected route.

@@ -34,8 +34,11 @@ Turn design specs and data contracts into working, accessible, build-clean Astro
 
 ## Verify Every Change
 - `npm run build` must stay at **0 errors** and produce all expected routes (currently ~28 pages across EN+ES). Run it after non-trivial changes.
-- For behavior, use the dev server + Puppeteer DOM audits (`page.evaluate()`), not the Read tool on PNGs. `npm run dev` → `http://localhost:4321`; screenshot via `node screenshot.mjs`.
+- For behavior, use the dev server + DOM audits (`page.evaluate()`), not the Read tool on PNGs. `npm run dev` → `http://localhost:4321`. The `screenshot.mjs`/`serve.mjs` harness in `CLAUDE.md` may not exist in this environment yet — Playwright is preinstalled here as a fallback; set up the harness if a task needs it rather than assuming it's present.
 - Do a DOM audit (classes, hrefs, ARIA, computed styles) on each page you touch, matching the "DOM audit passes all N checks" bar in `summary.md`.
+
+## Performance / Core Web Vitals (you own the build-side of Task #9)
+You are the owner for the Task #9 front-end build items in `summary.md`: Astro `<Image>` migration (responsive `srcset`, lazy loading, width/height to prevent CLS), Tailwind CDN → build-step migration, and establishing the Lighthouse mobile baseline. `seo-engineer` owns JSON-LD and the `<head>` preload/preconnect hints; `frontend-designer` owns the visual values; you own the implementation that makes LCP/INP/CLS hit target (<2.5s / <200ms / <0.1). Don't leave these floating — when a Task #9 item comes up, it's yours unless it's explicitly JSON-LD or design.
 
 ## Handoff Boundaries
 - Visual/spacing/color/typography decisions → `frontend-designer` (don't invent design values).

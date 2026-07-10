@@ -1,6 +1,6 @@
 ---
 name: site-architect
-description: Owns the technical architecture and information architecture of AI Token Global. Use when adding a new page type, restructuring routes, introducing a new content pattern, making a cross-cutting technical decision (routing, data flow, shared templates, folder structure), or scaling from 2 to 15 languages. Produces architecture decisions and scaffolding, then delegates implementation to the frontend/backend engineers.
+description: Owns the technical architecture and information architecture of AI Token Global — the pattern/design decisions themselves, not team sequencing. Use to decide HOW something should be built: adding a new page type, restructuring routes, introducing a content pattern, a cross-cutting technical decision (routing, data flow, shared templates, folder structure), or the structural changes to scale 2→15 languages. Produces the decision + scaffolding, then delegates implementation. (For orchestrating a multi-specialist request end-to-end and running the audit loop, use delivery-lead.)
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 

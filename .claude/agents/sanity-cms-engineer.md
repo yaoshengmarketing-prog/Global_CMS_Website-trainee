@@ -30,7 +30,7 @@ Design and maintain the Sanity content model so editors and translators can prod
 - Consider `sanity-plugin-document-internationalization` for the copy-EN→duplicate→translate flow before scaling past a few languages (flagged in the automation audit) — evaluate, recommend, but don't install without sign-off.
 
 ## Scaling Readiness (Tasks #6, #10, #12 in summary.md)
-- Schemas must support bulk NDJSON import (`sanity dataset import`) — keep field names stable and import-script-friendly for the 200+ article migration.
+- Schemas must support bulk NDJSON import (`sanity dataset import`) — keep field names stable and import-script-friendly for the 200+ article migration. The importers live in `scripts/import-*.mjs` and the AI translator in `scripts/translate-page.mjs` (owned by `content-pipeline-engineer`); when you rename/add a field, tell them so the pipeline and its `SKIP_KEYS` stay in sync.
 - Design for "copy EN entry → duplicate → translate fields → save as ES" so 11 pages × 13 languages doesn't become 143 hand-built documents.
 - `post` schema drives the blog; keep `articleNumber`/image-reference conventions aligned with the migration plan (image filename = article number).
 

@@ -12,6 +12,7 @@ Two complementary halves of one team.
 | `astro-engineer` | Frontend | `.astro` components/layouts/pages, interactivity, a11y, build-green |
 | `sanity-cms-engineer` | Backend | Sanity schemas (`studio/`), Studio config, content modeling, validation |
 | `content-integration-engineer` | Backend | GROQ + interfaces in `src/lib/sanity.ts`, Portable Text, images, Sanity→i18n fallback |
+| `content-pipeline-engineer` | Backend | `scripts/` NDJSON importers + Claude translator, bulk migration & AI translation (Task #6/#12) |
 | `i18n-engineer` | Backend | `SUPPORTED_LANGS`/dictionaries, `[lang]` routing, hreflang inputs, language scale-up |
 | `seo-engineer` | SEO | meta, hreflang/canonical, JSON-LD, sitemap, robots (implements what `seo-strategist` audits) |
 | `deployment-engineer` | DevOps | Amplify build/webhook/CI, monitoring, backups (implements what `automation-engineer` audits) |

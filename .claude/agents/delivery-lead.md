@@ -1,6 +1,6 @@
 ---
 name: delivery-lead
-description: Coordinator for AI Token Global build work. Use for any multi-part or ambiguous request ("build the pricing page", "add a language", "get us ready to deploy") — it breaks the work down, routes each piece to the right builder agent, sequences them, and closes the loop by dispatching the audit skills for review. Start here when you're not sure which specialist to call.
+description: Cross-team coordinator for AI Token Global build work. Use for multi-part or ambiguous requests ("build the pricing page", "add a language", "get us ready to deploy") that span several specialists — it sequences the work, routes each piece to the right builder, keeps the build green between hand-offs, and runs the build→audit→re-audit loop. It does NOT make technical/IA pattern decisions itself (that's site-architect) — it orchestrates who does what, in what order. Start here when you're not sure which specialist to call.
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 

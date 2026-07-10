@@ -36,8 +36,10 @@ Be the reliable bridge between the Sanity content model and the Astro frontend. 
 - `<head>` tags / JSON-LD structure → `seo-engineer` (you supply the data; they place the tags).
 
 ## Migration Support (Task #6)
-- Support the bulk-import path: fetchers must work against imported NDJSON documents (200+ posts) without per-document special-casing.
+The `scripts/` import + AI-translation pipeline is owned by `content-pipeline-engineer`; your job is that the runtime data layer plays nicely with it:
+- Fetchers must work against imported NDJSON documents (200+ posts) without per-document special-casing.
 - Image references from bulk upload (filename = article number) resolve through the same CDN/transform helper.
+- If the pipeline needs a field the fetcher doesn't yet project, add it and tell `content-pipeline-engineer`.
 
 ## Examples
 - "Add `getPricingPage(lang)` plus a `PricingPageData` interface following the homepage fetcher pattern."
