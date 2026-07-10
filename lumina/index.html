@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumina 官方資訊中心</title>
+<meta name="description" content="Lumina 官方資訊中心：整理常用入口、常見問題與安全提醒，一頁掌握帳號、下載、訂閱與支援資訊。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:"Sora","PingFang TC","Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif; color:#1B1D29; background:#F5F6FA; -webkit-font-smoothing:antialiased; }
+  a { color:var(--primary,#2F4BE0); text-decoration:none; }
+  a:hover { color:var(--primaryDark,#2136B8); }
+  @keyframes lumFloat { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-8px);} }
+  @keyframes lumSpinGlow { 0%{ transform:rotate(0);} 100%{ transform:rotate(360deg);} }
+</style>
+</head>
+<body>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:"Sora","PingFang TC","Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif; color:#1B1D29; background:#F5F6FA; -webkit-font-smoothing:antialiased; }
+  a { color:var(--primary,#2F4BE0); text-decoration:none; }
+  a:hover { color:var(--primaryDark,#2136B8); }
+  @keyframes lumFloat { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-8px);} }
+  @keyframes lumSpinGlow { 0%{ transform:rotate(0);} 100%{ transform:rotate(360deg);} }
+</style>
+</helmet>
+<div id="lumina-root" style="--primary:#2F4BE0;--primaryDark:#2136B8;--teal:#0F9E93; background:#F5F6FA; overflow-x:hidden;">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.86); backdrop-filter:blur(12px); border-bottom:1px solid #E6E8F0;">
+    <div style="max-width:1180px; margin:0 auto; padding:0 24px; height:72px; display:flex; align-items:center; gap:20px;">
+      <!-- logo -->
+      <a href="#" style="display:flex; align-items:center; gap:10px; flex:0 0 auto;">
+        <span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,var(--primary),var(--teal)); display:inline-flex; align-items:center; justify-content:center; color:#fff; font-family:'Sora'; font-weight:800; font-size:18px;">L</span>
+        <span style="font-family:'Sora'; font-weight:700; font-size:20px; color:#1B1D29; letter-spacing:-.01em;">Lumina</span>
+      </a>
+
+      <!-- desktop nav -->
+      <nav data-desktop-nav="flex" style="display:flex; align-items:center; gap:4px; margin-left:8px;">
+        <a href="#" style="padding:9px 12px; border-radius:9px; font-size:15px; font-weight:500; color:#3A3E4E; white-space:nowrap;" style-hover="background:#F0F1F7; color:#1B1D29;">產品總覽</a>
+
+        <div style="position:relative;" data-dropwrap>
+          <a href="#" style="display:flex; align-items:center; gap:5px; padding:9px 12px; border-radius:9px; font-size:15px; font-weight:500; color:#3A3E4E; white-space:nowrap;" style-hover="background:#F0F1F7; color:#1B1D29;">方案與優惠
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div data-dropdown style="position:absolute; top:calc(100% + 6px); left:50%; transform:translate(-50%,8px); opacity:0; visibility:hidden; transition:all .18s ease; min-width:220px; background:#fff; border:1px solid #E6E8F0; border-radius:14px; box-shadow:0 12px 34px rgba(16,24,40,.12); padding:8px; display:grid; gap:2px;">
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">訂閱方案</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">團隊授權</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">教育優惠</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">推薦計畫</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">新用戶禮遇</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">續約折扣</a>
+          </div>
+        </div>
+
+        <a href="#" style="padding:9px 12px; border-radius:9px; font-size:15px; font-weight:500; color:#3A3E4E; white-space:nowrap;" style-hover="background:#F0F1F7; color:#1B1D29;">範本庫</a>
+
+        <div style="position:relative;" data-dropwrap>
+          <a href="#" style="display:flex; align-items:center; gap:5px; padding:9px 12px; border-radius:9px; font-size:15px; font-weight:500; color:#3A3E4E; white-space:nowrap;" style-hover="background:#F0F1F7; color:#1B1D29;">資源中心
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div data-dropdown style="position:absolute; top:calc(100% + 6px); left:50%; transform:translate(-50%,8px); opacity:0; visibility:hidden; transition:all .18s ease; min-width:240px; background:#fff; border:1px solid #E6E8F0; border-radius:14px; box-shadow:0 12px 34px rgba(16,24,40,.12); padding:8px; display:grid; gap:2px;">
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">安全與隱私指南</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">帳務與訂閱說明</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">註冊與 App 教學</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">平台功能介紹</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">使用情境</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">整合與 API</a>
+          </div>
+        </div>
+
+        <div style="position:relative;" data-dropwrap>
+          <a href="#" style="display:flex; align-items:center; gap:5px; padding:9px 12px; border-radius:9px; font-size:15px; font-weight:500; color:#3A3E4E; white-space:nowrap;" style-hover="background:#F0F1F7; color:#1B1D29;">支援中心
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div data-dropdown style="position:absolute; top:calc(100% + 6px); left:50%; transform:translate(-50%,8px); opacity:0; visibility:hidden; transition:all .18s ease; min-width:200px; background:#fff; border:1px solid #E6E8F0; border-radius:14px; box-shadow:0 12px 34px rgba(16,24,40,.12); padding:8px; display:grid; gap:2px;">
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">新手幫助</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">服務條款</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">聯絡我們</a>
+            <a href="#" style="padding:9px 12px; border-radius:9px; font-size:14.5px; color:#3A3E4E;" style-hover="background:#F5F6FA; color:var(--primary);">使用規範</a>
+          </div>
+        </div>
+
+        <a href="#" style="padding:9px 12px; border-radius:9px; font-size:15px; font-weight:500; color:#3A3E4E; white-space:nowrap;" style-hover="background:#F0F1F7; color:#1B1D29;">案例</a>
+      </nav>
+
+      <!-- right cluster -->
+      <div style="margin-left:auto; display:flex; align-items:center; gap:10px;">
+        <button data-desktop-nav="flex" aria-label="搜尋" style="display:flex; align-items:center; justify-content:center; width:40px; height:40px; border:1px solid #E6E8F0; background:#fff; border-radius:10px; color:#5B6072; cursor:pointer;" style-hover="border-color:#C9CDDE; color:#1B1D29;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+        <a href="#" data-desktop-nav="inline-flex" style="padding:10px 16px; border:1px solid #E6E8F0; border-radius:10px; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:#C9CDDE; background:#fff;">登入</a>
+        <a href="#" style="padding:10px 18px; border-radius:10px; font-size:15px; font-weight:600; color:#fff; background:var(--primary); box-shadow:0 6px 16px rgba(47,75,224,.28);" style-hover="background:var(--primaryDark);">免費註冊</a>
+
+        <!-- mobile toggle -->
+        <button data-mobile-toggle data-act="mtoggle" aria-label="選單" style="display:none; align-items:center; justify-content:center; width:42px; height:42px; border:1px solid #E6E8F0; background:#fff; border-radius:10px; color:#1B1D29; cursor:pointer;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div data-mobile-menu style="display:none; border-top:1px solid #E6E8F0; background:#fff; padding:12px 24px 20px;">
+      <div style="display:grid; gap:2px;">
+        <a href="#" style="padding:12px 8px; border-radius:9px; font-size:16px; font-weight:600; color:#1B1D29;">產品總覽</a>
+        <a href="#" style="padding:12px 8px; border-radius:9px; font-size:16px; font-weight:600; color:#1B1D29;">方案與優惠</a>
+        <a href="#" style="padding:12px 8px; border-radius:9px; font-size:16px; font-weight:600; color:#1B1D29;">範本庫</a>
+        <a href="#" style="padding:12px 8px; border-radius:9px; font-size:16px; font-weight:600; color:#1B1D29;">資源中心</a>
+        <a href="#" style="padding:12px 8px; border-radius:9px; font-size:16px; font-weight:600; color:#1B1D29;">支援中心</a>
+        <a href="#" style="padding:12px 8px; border-radius:9px; font-size:16px; font-weight:600; color:#1B1D29;">案例</a>
+      </div>
+      <div style="display:flex; gap:10px; margin-top:14px;">
+        <a href="#" style="flex:1; text-align:center; padding:12px; border:1px solid #E6E8F0; border-radius:10px; font-weight:600; color:#1B1D29;">登入</a>
+        <a href="#" style="flex:1; text-align:center; padding:12px; border-radius:10px; font-weight:600; color:#fff; background:var(--primary);">免費註冊</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO CAROUSEL ============ -->
+  <section data-screen-label="Hero" style="max-width:1180px; margin:0 auto; padding:28px 24px 0;">
+    <div style="position:relative; border-radius:24px; overflow:hidden; box-shadow:0 20px 50px rgba(16,24,40,.14);">
+      <div data-carousel-track style="display:flex; transition:transform .65s cubic-bezier(.4,0,.2,1);">
+
+        <!-- slide 1 -->
+        <div style="flex:0 0 100%; min-height:440px; padding:clamp(32px,5vw,68px); background:linear-gradient(120deg,#151726 0%,#26305C 52%,#2F4BE0 100%); color:#fff; display:flex; align-items:center;">
+          <div style="max-width:620px;">
+            <div style="display:inline-flex; align-items:center; gap:8px; padding:7px 14px; border-radius:999px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); font-size:13.5px; font-weight:600; letter-spacing:.02em; color:#DCE1FF;">官方資訊中心</div>
+            <h1 style="font-family:'Sora'; font-weight:800; font-size:clamp(38px,5.4vw,64px); line-height:1.02; margin:18px 0 0; letter-spacing:-.02em;">Lumina</h1>
+            <p style="font-size:clamp(18px,2.2vw,24px); font-weight:500; line-height:1.4; margin:14px 0 0; color:#C9CFF2;">帳號、下載、訂閱與支援資訊,一頁掌握</p>
+            <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:30px;">
+              <a href="#" style="padding:13px 24px; border-radius:11px; font-size:15.5px; font-weight:600; color:#151726; background:#fff;" style-hover="background:#EEF0FF;">官方入口</a>
+              <a href="#" style="padding:13px 24px; border-radius:11px; font-size:15.5px; font-weight:600; color:#fff; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.32);" style-hover="background:rgba(255,255,255,.2);">使用教學</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 2 -->
+        <div style="flex:0 0 100%; min-height:440px; padding:clamp(32px,5vw,68px); background:linear-gradient(120deg,#0E2A26 0%,#12564C 55%,#0F9E93 100%); color:#fff; display:flex; align-items:center;">
+          <div style="max-width:620px;">
+            <div style="display:inline-flex; align-items:center; gap:8px; padding:7px 14px; border-radius:999px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); font-size:13.5px; font-weight:600; color:#D6F5EF;">全新版本</div>
+            <h2 style="font-family:'Sora'; font-weight:800; font-size:clamp(30px,4.4vw,52px); line-height:1.05; margin:18px 0 0; letter-spacing:-.02em;">桌面版 3.0 上線</h2>
+            <p style="font-size:clamp(17px,2vw,22px); font-weight:500; line-height:1.45; margin:14px 0 0; color:#C7EFE8;">更快的同步、更順手的編輯體驗,離線也能用。</p>
+            <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:30px;">
+              <a href="#" style="padding:13px 24px; border-radius:11px; font-size:15.5px; font-weight:600; color:#0E2A26; background:#fff;" style-hover="background:#E3F7F2;">了解更多</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 3 -->
+        <div style="flex:0 0 100%; min-height:440px; padding:clamp(32px,5vw,68px); background:linear-gradient(120deg,#2A1636 0%,#5A2B72 52%,#9B4DDB 100%); color:#fff; display:flex; align-items:center;">
+          <div style="max-width:620px;">
+            <div style="display:inline-flex; align-items:center; gap:8px; padding:7px 14px; border-radius:999px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); font-size:13.5px; font-weight:600; color:#EDD9FB;">團隊協作</div>
+            <h2 style="font-family:'Sora'; font-weight:800; font-size:clamp(30px,4.4vw,52px); line-height:1.05; margin:18px 0 0; letter-spacing:-.02em;">團隊方案上線</h2>
+            <p style="font-size:clamp(17px,2vw,22px); font-weight:500; line-height:1.45; margin:14px 0 0; color:#E4CCF6;">邀請成員、共用範本,一起把想法整理好。</p>
+            <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:30px;">
+              <a href="#" style="padding:13px 24px; border-radius:11px; font-size:15.5px; font-weight:600; color:#2A1636; background:#fff;" style-hover="background:#F4E9FB;">查看方案</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- arrows -->
+      <button data-act="prev" aria-label="上一張" style="position:absolute; top:50%; left:18px; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; border:none; background:rgba(255,255,255,.16); backdrop-filter:blur(6px); color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="background:rgba(255,255,255,.3);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <button data-act="next" aria-label="下一張" style="position:absolute; top:50%; right:18px; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; border:none; background:rgba(255,255,255,.16); backdrop-filter:blur(6px); color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="background:rgba(255,255,255,.3);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+
+      <!-- dots -->
+      <div style="position:absolute; bottom:22px; left:clamp(32px,5vw,68px); display:flex; gap:9px;">
+        <button data-dot data-act="dot" data-i="0" aria-label="第 1 張" style="height:9px; width:26px; border:none; border-radius:999px; background:#fff; cursor:pointer; padding:0; transition:all .3s ease;"></button>
+        <button data-dot data-act="dot" data-i="1" aria-label="第 2 張" style="height:9px; width:9px; border:none; border-radius:999px; background:rgba(255,255,255,.45); cursor:pointer; padding:0; transition:all .3s ease;"></button>
+        <button data-dot data-act="dot" data-i="2" aria-label="第 3 張" style="height:9px; width:9px; border:none; border-radius:999px; background:rgba(255,255,255,.45); cursor:pointer; padding:0; transition:all .3s ease;"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTRO HIGHLIGHT ============ -->
+  <section style="max-width:1180px; margin:0 auto; padding:40px 24px 8px;">
+    <div data-reveal style="background:#fff; border:1px solid #E6E8F0; border-radius:18px; padding:clamp(24px,3vw,36px); box-shadow:0 1px 2px rgba(16,24,40,.04),0 10px 30px rgba(16,24,40,.05);">
+      <div style="display:inline-block; font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--teal); text-transform:uppercase;">重點總覽</div>
+      <p style="font-size:clamp(16px,1.8vw,18px); line-height:1.75; color:#3A3E4E; margin:14px 0 0; max-width:900px;">想找 Lumina 的正確入口、登入方式、App 下載、客服聯繫或訂閱資訊,可以直接從這一頁快速查看。首頁集中整理常用功能、常見問題與安全提醒,方便你一次找到需要的入口與操作教學。</p>
+      <div style="margin-top:16px; font-size:14px; color:#8A8F9F;">更新日期：2026 / 04 / 29</div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 1: 開始使用 ============ -->
+  <section data-screen-label="開始使用" style="max-width:1180px; margin:0 auto; padding:44px 24px;">
+    <div data-reveal style="max-width:760px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--teal); text-transform:uppercase;">Get Started</div>
+      <h2 style="font-family:'Sora'; font-weight:700; font-size:clamp(26px,3.4vw,38px); margin:10px 0 0; letter-spacing:-.01em;">開始使用 Lumina</h2>
+      <p style="font-size:16.5px; line-height:1.7; color:#5B6072; margin:12px 0 0;">第一次使用,通常最先遇到的是正確網址、註冊登入與帳號設定。這一區先整理最常用入口與基本操作。</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; margin-top:28px;">
+      <a href="#" data-reveal data-reveal-delay="0" style="display:block; background:#fff; border:1px solid #E6E8F0; border-radius:16px; padding:26px; box-shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.05); transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-5px); box-shadow:0 18px 40px rgba(16,24,40,.12);">
+        <div style="width:46px; height:46px; border-radius:12px; background:#EEF1FF; color:var(--primary); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
+        </div>
+        <h3 style="font-size:18px; font-weight:700; margin:18px 0 0; color:#1B1D29;">官方入口</h3>
+        <p style="font-size:14.5px; line-height:1.65; color:#5B6072; margin:8px 0 0;">整理正確網址辨識方式與入口核對重點,幫助你先確認是否進到正確頁面。</p>
+        <span style="display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-size:14.5px; font-weight:600; color:var(--primary);">查看入口資訊
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="#" data-reveal data-reveal-delay="80" style="display:block; background:#fff; border:1px solid #E6E8F0; border-radius:16px; padding:26px; box-shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.05); transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-5px); box-shadow:0 18px 40px rgba(16,24,40,.12);">
+        <div style="width:46px; height:46px; border-radius:12px; background:#E6F7F4; color:var(--teal); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>
+        </div>
+        <h3 style="font-size:18px; font-weight:700; margin:18px 0 0; color:#1B1D29;">登入註冊</h3>
+        <p style="font-size:14.5px; line-height:1.65; color:#5B6072; margin:8px 0 0;">查看帳號建立、登入方式、密碼驗證與常見登入異常的基本排查方向。</p>
+        <span style="display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-size:14.5px; font-weight:600; color:var(--primary);">查看登入註冊
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="#" data-reveal data-reveal-delay="160" style="display:block; background:#fff; border:1px solid #E6E8F0; border-radius:16px; padding:26px; box-shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.05); transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-5px); box-shadow:0 18px 40px rgba(16,24,40,.12);">
+        <div style="width:46px; height:46px; border-radius:12px; background:#F3ECFB; color:#8B45C9; display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+        </div>
+        <h3 style="font-size:18px; font-weight:700; margin:18px 0 0; color:#1B1D29;">App 下載</h3>
+        <p style="font-size:14.5px; line-height:1.65; color:#5B6072; margin:8px 0 0;">整理 App 下載、安裝、更新與常見裝置相容問題,方便快速完成設定。</p>
+        <span style="display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-size:14.5px; font-weight:600; color:var(--primary);">查看 App 下載
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="#" data-reveal data-reveal-delay="240" style="display:block; background:#fff; border:1px solid #E6E8F0; border-radius:16px; padding:26px; box-shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.05); transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-5px); box-shadow:0 18px 40px rgba(16,24,40,.12);">
+        <div style="width:46px; height:46px; border-radius:12px; background:#FFF1E6; color:#D97A2B; display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 20l-5 2.4 1-5.6-4-4 5.6-.8z"/></svg>
+        </div>
+        <h3 style="font-size:18px; font-weight:700; margin:18px 0 0; color:#1B1D29;">平台特色</h3>
+        <p style="font-size:14.5px; line-height:1.65; color:#5B6072; margin:8px 0 0;">快速了解平台常見功能、操作流程與整體使用重點,方便先建立基本認識。</p>
+        <span style="display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-size:14.5px; font-weight:600; color:var(--primary);">查看平台重點
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2: 常用資訊入口 (band) ============ -->
+  <section data-screen-label="常用資訊入口" style="background:#fff; border-top:1px solid #E6E8F0; border-bottom:1px solid #E6E8F0;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 24px;">
+      <div data-reveal style="max-width:760px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--teal); text-transform:uppercase;">Core Info</div>
+        <h2 style="font-family:'Sora'; font-weight:700; font-size:clamp(26px,3.4vw,38px); margin:10px 0 0; letter-spacing:-.01em;">常用資訊入口</h2>
+        <p style="font-size:16.5px; line-height:1.7; color:#5B6072; margin:12px 0 0;">從新手入門、訂閱帳務到登入問題與安全提醒,常用資訊都能在這裡快速找到。</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; margin-top:28px;">
+        <a href="#" data-reveal data-reveal-delay="0" style="display:flex; gap:16px; background:#F8F9FC; border:1px solid #EDEFF5; border-radius:16px; padding:22px; transition:background .2s ease, border-color .2s ease;" style-hover="background:#fff; border-color:#C9CDDE;">
+          <div style="flex:0 0 auto; width:8px; border-radius:999px; background:var(--primary);"></div>
+          <div><h3 style="font-size:17px; font-weight:700; margin:0; color:#1B1D29;">新手入門</h3><p style="font-size:14px; line-height:1.6; color:#5B6072; margin:7px 0 0;">先看基本操作、使用方式與常見流程,更快掌握整體方向。</p></div>
+        </a>
+        <a href="#" data-reveal data-reveal-delay="70" style="display:flex; gap:16px; background:#F8F9FC; border:1px solid #EDEFF5; border-radius:16px; padding:22px; transition:background .2s ease, border-color .2s ease;" style-hover="background:#fff; border-color:#C9CDDE;">
+          <div style="flex:0 0 auto; width:8px; border-radius:999px; background:var(--teal);"></div>
+          <div><h3 style="font-size:17px; font-weight:700; margin:0; color:#1B1D29;">訂閱與帳務</h3><p style="font-size:14px; line-height:1.6; color:#5B6072; margin:7px 0 0;">付款、發票、方案調整與常見卡關重點整理,快速了解流程。</p></div>
+        </a>
+        <a href="#" data-reveal data-reveal-delay="140" style="display:flex; gap:16px; background:#F8F9FC; border:1px solid #EDEFF5; border-radius:16px; padding:22px; transition:background .2s ease, border-color .2s ease;" style-hover="background:#fff; border-color:#C9CDDE;">
+          <div style="flex:0 0 auto; width:8px; border-radius:999px; background:#8B45C9;"></div>
+          <div><h3 style="font-size:17px; font-weight:700; margin:0; color:#1B1D29;">登入與驗證</h3><p style="font-size:14px; line-height:1.6; color:#5B6072; margin:7px 0 0;">登入入口、驗證問題與常見異常一次看,遇到帳號狀況先從這裡排查。</p></div>
+        </a>
+        <a href="#" data-reveal data-reveal-delay="210" style="display:flex; gap:16px; background:#F8F9FC; border:1px solid #EDEFF5; border-radius:16px; padding:22px; transition:background .2s ease, border-color .2s ease;" style-hover="background:#fff; border-color:#C9CDDE;">
+          <div style="flex:0 0 auto; width:8px; border-radius:999px; background:#D97A2B;"></div>
+          <div><h3 style="font-size:17px; font-weight:700; margin:0; color:#1B1D29;">安全提醒</h3><p style="font-size:14px; line-height:1.6; color:#5B6072; margin:7px 0 0;">假網站、假客服與常見詐騙情境一次看,先做好辨識再操作。</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3: 常見問題入口 (arrow links) ============ -->
+  <section style="max-width:1180px; margin:0 auto; padding:56px 24px 20px;">
+    <div data-reveal style="max-width:760px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--teal); text-transform:uppercase;">Quick Links</div>
+      <h2 style="font-family:'Sora'; font-weight:700; font-size:clamp(26px,3.4vw,38px); margin:10px 0 0; letter-spacing:-.01em;">常見問題入口</h2>
+      <p style="font-size:16.5px; line-height:1.7; color:#5B6072; margin:12px 0 0;">整理付款、登入、驗證、App 與安全相關的常見問題,先找到對應情況,再查看處理方式。</p>
+    </div>
+    <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:10px 28px; margin-top:24px;">
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:16px 4px; border-bottom:1px solid #E6E8F0; font-size:15.5px; font-weight:500; color:#3A3E4E;" style-hover="color:var(--primary);"><span style="color:var(--primary); font-weight:700;">→</span> 付款沒入帳怎麼辦？查單與補單流程一次看</a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:16px 4px; border-bottom:1px solid #E6E8F0; font-size:15.5px; font-weight:500; color:#3A3E4E;" style-hover="color:var(--primary);"><span style="color:var(--primary); font-weight:700;">→</span> 訂閱被取消怎麼辦？常見原因與復原方式整理</a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:16px 4px; border-bottom:1px solid #E6E8F0; font-size:15.5px; font-weight:500; color:#3A3E4E;" style-hover="color:var(--primary);"><span style="color:var(--primary); font-weight:700;">→</span> 顯示付款成功但未開通？延遲與查詢步驟一次看</a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:16px 4px; border-bottom:1px solid #E6E8F0; font-size:15.5px; font-weight:500; color:#3A3E4E;" style-hover="color:var(--primary);"><span style="color:var(--primary); font-weight:700;">→</span> 登入與驗證問題怎麼排查？常見異常與處理方式</a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:16px 4px; border-bottom:1px solid #E6E8F0; font-size:15.5px; font-weight:500; color:#3A3E4E;" style-hover="color:var(--primary);"><span style="color:var(--primary); font-weight:700;">→</span> App 安裝問題怎麼處理？下載、安裝與更新異常整理</a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:16px 4px; border-bottom:1px solid #E6E8F0; font-size:15.5px; font-weight:500; color:#3A3E4E;" style-hover="color:var(--primary);"><span style="color:var(--primary); font-weight:700;">→</span> 官方入口怎麼核對？正確網址辨識與避開假站方式</a>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4: FAQ ACCORDION ============ -->
+  <section data-screen-label="常見問題" style="max-width:900px; margin:0 auto; padding:44px 24px;">
+    <div data-reveal style="text-align:center; margin-bottom:26px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--teal); text-transform:uppercase;">FAQ</div>
+      <h2 style="font-family:'Sora'; font-weight:700; font-size:clamp(26px,3.4vw,38px); margin:10px 0 0; letter-spacing:-.01em;">常見問題</h2>
+    </div>
+
+    <div data-reveal style="display:grid; gap:12px;">
+      <div data-faq style="background:#fff; border:1px solid #E6E8F0; border-radius:14px; overflow:hidden;">
+        <button data-act="faq" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 22px; background:none; border:none; cursor:pointer; text-align:left; font-size:16.5px; font-weight:600; color:#1B1D29; font-family:inherit;">第一次使用要從哪裡開始？
+          <span data-faq-ic style="flex:0 0 auto; color:var(--primary); transition:transform .25s ease;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div data-faq-ans style="max-height:0; opacity:0; overflow:hidden; transition:max-height .3s ease, opacity .3s ease;"><p style="padding:0 22px 20px; margin:0; font-size:15px; line-height:1.7; color:#5B6072;">建議先看「新手指南」,照著註冊、驗證到基本操作的順序走一遍,最不容易卡關。 → <a href="#">看完整教學</a></p></div>
+      </div>
+      <div data-faq style="background:#fff; border:1px solid #E6E8F0; border-radius:14px; overflow:hidden;">
+        <button data-act="faq" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 22px; background:none; border:none; cursor:pointer; text-align:left; font-size:16.5px; font-weight:600; color:#1B1D29; font-family:inherit;">註冊與 App 安裝通常多久能完成？
+          <span data-faq-ic style="flex:0 0 auto; color:var(--primary); transition:transform .25s ease;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div data-faq-ans style="max-height:0; opacity:0; overflow:hidden; transition:max-height .3s ease, opacity .3s ease;"><p style="padding:0 22px 20px; margin:0; font-size:15px; line-height:1.7; color:#5B6072;">一般幾分鐘就能完成;如果遇到安裝失敗、版本不支援或權限問題,建議先依照教學逐步排除。 → <a href="#">看完整教學</a></p></div>
+      </div>
+      <div data-faq style="background:#fff; border:1px solid #E6E8F0; border-radius:14px; overflow:hidden;">
+        <button data-act="faq" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 22px; background:none; border:none; cursor:pointer; text-align:left; font-size:16.5px; font-weight:600; color:#1B1D29; font-family:inherit;">登入失敗、驗證碼收不到怎麼辦？
+          <span data-faq-ic style="flex:0 0 auto; color:var(--primary); transition:transform .25s ease;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div data-faq-ans style="max-height:0; opacity:0; overflow:hidden; transition:max-height .3s ease, opacity .3s ease;"><p style="padding:0 22px 20px; margin:0; font-size:15px; line-height:1.7; color:#5B6072;">先確認網路與簡訊攔截設定,再檢查是否有輸入錯誤或短時間嘗試過多;多數情況能快速排除。 → <a href="#">看完整教學</a></p></div>
+      </div>
+      <div data-faq style="background:#fff; border:1px solid #E6E8F0; border-radius:14px; overflow:hidden;">
+        <button data-act="faq" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 22px; background:none; border:none; cursor:pointer; text-align:left; font-size:16.5px; font-weight:600; color:#1B1D29; font-family:inherit;">付款審核時間多久？為什麼會延遲？
+          <span data-faq-ic style="flex:0 0 auto; color:var(--primary); transition:transform .25s ease;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div data-faq-ans style="max-height:0; opacity:0; overflow:hidden; transition:max-height .3s ease, opacity .3s ease;"><p style="padding:0 22px 20px; margin:0; font-size:15px; line-height:1.7; color:#5B6072;">多數情況下會受到資料核對、金流一致性與審核排隊影響。若時間比平常久,建議先確認是否有資料需要重新檢查。 → <a href="#">看完整教學</a></p></div>
+      </div>
+      <div data-faq style="background:#fff; border:1px solid #E6E8F0; border-radius:14px; overflow:hidden;">
+        <button data-act="faq" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 22px; background:none; border:none; cursor:pointer; text-align:left; font-size:16.5px; font-weight:600; color:#1B1D29; font-family:inherit;">怎麼辨識假網站、假客服？
+          <span data-faq-ic style="flex:0 0 auto; color:var(--primary); transition:transform .25s ease;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div data-faq-ans style="max-height:0; opacity:0; overflow:hidden; transition:max-height .3s ease, opacity .3s ease;"><p style="padding:0 22px 20px; margin:0; font-size:15px; line-height:1.7; color:#5B6072;">不要點陌生短網址,也不要提供密碼、驗證碼或敏感資料;若遇到異常指示,請先停止操作,再回到官方入口重新核對。 → <a href="#">看完整教學</a></p></div>
+      </div>
+    </div>
+
+    <div data-reveal style="margin-top:22px; background:#FFF8EC; border:1px solid #F6E4BE; border-radius:14px; padding:18px 20px; font-size:14.5px; line-height:1.65; color:#8A6A22;">提醒：客服通常不會索取密碼或驗證碼;若遇到要求轉帳、補費或提供敏感資料的訊息,請先停止操作,再回到官方入口重新核對。</div>
+  </section>
+
+  <!-- ============ SECTION 5: 最新更新 ============ -->
+  <section data-screen-label="最新更新" style="background:#fff; border-top:1px solid #E6E8F0; border-bottom:1px solid #E6E8F0;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 24px;">
+      <div data-reveal style="display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:24px;">
+        <div>
+          <div style="font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--teal); text-transform:uppercase;">Updates</div>
+          <h2 style="font-family:'Sora'; font-weight:700; font-size:clamp(26px,3.4vw,38px); margin:10px 0 0; letter-spacing:-.01em;">最新更新</h2>
+        </div>
+        <a href="#" style="font-size:15px; font-weight:600; color:var(--primary); display:inline-flex; align-items:center; gap:6px;">查看全部
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div data-reveal style="display:grid; gap:2px;">
+        <a href="#" style="display:flex; align-items:center; gap:18px; padding:20px 6px; border-top:1px solid #E6E8F0;" style-hover="background:#F8F9FC;">
+          <span style="flex:0 0 auto; font-size:13px; font-weight:600; color:#8A8F9F; width:92px;">2026 / 04 / 26</span>
+          <span style="font-size:16px; font-weight:500; color:#1B1D29; line-height:1.5;">免費試用怎麼開始？試用入口、方案差異、體驗額度一次看懂</span>
+        </a>
+        <a href="#" style="display:flex; align-items:center; gap:18px; padding:20px 6px; border-top:1px solid #E6E8F0;" style-hover="background:#F8F9FC;">
+          <span style="flex:0 0 auto; font-size:13px; font-weight:600; color:#8A8F9F; width:92px;">2026 / 04 / 20</span>
+          <span style="font-size:16px; font-weight:500; color:#1B1D29; line-height:1.5;">官方入口怎麼核對？正確網址辨識與假站避開方式一次看</span>
+        </a>
+        <a href="#" style="display:flex; align-items:center; gap:18px; padding:20px 6px; border-top:1px solid #E6E8F0;" style-hover="background:#F8F9FC;">
+          <span style="flex:0 0 auto; font-size:13px; font-weight:600; color:#8A8F9F; width:92px;">2026 / 04 / 14</span>
+          <span style="font-size:16px; font-weight:500; color:#1B1D29; line-height:1.5;">App 下載與安裝怎麼處理？常見更新與異常整理</span>
+        </a>
+        <a href="#" style="display:flex; align-items:center; gap:18px; padding:20px 6px; border-top:1px solid #E6E8F0; border-bottom:1px solid #E6E8F0;" style-hover="background:#F8F9FC;">
+          <span style="flex:0 0 auto; font-size:13px; font-weight:600; color:#8A8F9F; width:92px;">2026 / 04 / 08</span>
+          <span style="font-size:16px; font-weight:500; color:#1B1D29; line-height:1.5;">訂閱被取消怎麼辦？常見原因與復原方式整理</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 6: 延伸主題分類 ============ -->
+  <section style="max-width:1180px; margin:0 auto; padding:56px 24px;">
+    <div data-reveal style="max-width:760px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:.08em; color:var(--teal); text-transform:uppercase;">Categories</div>
+      <h2 style="font-family:'Sora'; font-weight:700; font-size:clamp(26px,3.4vw,38px); margin:10px 0 0; letter-spacing:-.01em;">延伸主題分類</h2>
+      <p style="font-size:16.5px; line-height:1.7; color:#5B6072; margin:12px 0 0;">想繼續查看不同主題內容,可從下列分類快速進入。</p>
+    </div>
+    <div data-reveal style="display:flex; flex-wrap:wrap; gap:12px; margin-top:24px;">
+      <a href="#" style="padding:11px 20px; border-radius:999px; background:#fff; border:1px solid #E6E8F0; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:var(--primary); color:var(--primary);">新手教學</a>
+      <a href="#" style="padding:11px 20px; border-radius:999px; background:#fff; border:1px solid #E6E8F0; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:var(--primary); color:var(--primary);">帳務與訂閱</a>
+      <a href="#" style="padding:11px 20px; border-radius:999px; background:#fff; border:1px solid #E6E8F0; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:var(--primary); color:var(--primary);">平台特色</a>
+      <a href="#" style="padding:11px 20px; border-radius:999px; background:#fff; border:1px solid #E6E8F0; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:var(--primary); color:var(--primary);">註冊與 App</a>
+      <a href="#" style="padding:11px 20px; border-radius:999px; background:#fff; border:1px solid #E6E8F0; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:var(--primary); color:var(--primary);">安全與防詐</a>
+      <a href="#" style="padding:11px 20px; border-radius:999px; background:#fff; border:1px solid #E6E8F0; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:var(--primary); color:var(--primary);">整合與 API</a>
+      <a href="#" style="padding:11px 20px; border-radius:999px; background:#fff; border:1px solid #E6E8F0; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:var(--primary); color:var(--primary);">使用情境</a>
+      <a href="#" style="padding:11px 20px; border-radius:999px; background:#fff; border:1px solid #E6E8F0; font-size:15px; font-weight:600; color:#1B1D29;" style-hover="border-color:var(--primary); color:var(--primary);">玩家評價與實測</a>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 7: 安全與隱私 ============ -->
+  <section data-screen-label="安全與隱私" style="max-width:1180px; margin:0 auto; padding:20px 24px 60px;">
+    <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; align-items:center; background:linear-gradient(120deg,#151726,#26305C); border-radius:22px; padding:clamp(28px,4vw,48px); color:#fff;">
+      <div>
+        <div style="font-size:13px; font-weight:700; letter-spacing:.08em; color:#9DA8E8; text-transform:uppercase;">Security & Privacy</div>
+        <h2 style="font-family:'Sora'; font-weight:700; font-size:clamp(24px,3vw,34px); margin:10px 0 0; letter-spacing:-.01em;">安全與隱私資訊</h2>
+        <p style="font-size:16px; line-height:1.75; color:#C9CFF2; margin:14px 0 0;">請優先使用官方入口,避免透過不明連結登入,並妥善保管帳號、密碼與驗證資訊。若想進一步了解資料保護與使用規範,可從下方入口查看。</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;">
+          <a href="#" style="padding:10px 18px; border-radius:10px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); color:#fff; font-size:14.5px; font-weight:600;" style-hover="background:rgba(255,255,255,.2);">隱私權政策</a>
+          <a href="#" style="padding:10px 18px; border-radius:10px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); color:#fff; font-size:14.5px; font-weight:600;" style-hover="background:rgba(255,255,255,.2);">官方入口辨識</a>
+          <a href="#" style="padding:10px 18px; border-radius:10px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); color:#fff; font-size:14.5px; font-weight:600;" style-hover="background:rgba(255,255,255,.2);">防詐資訊</a>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <div style="position:relative; width:180px; height:180px;">
+          <div style="position:absolute; inset:0; border-radius:50%; border:1px dashed rgba(255,255,255,.25); animation:lumSpinGlow 22s linear infinite;"></div>
+          <div style="position:absolute; inset:26px; border-radius:26px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); display:flex; align-items:center; justify-content:center; animation:lumFloat 5s ease-in-out infinite;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#9DA8E8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTNER / LOGO WALL ============ -->
+  <section style="max-width:1180px; margin:0 auto; padding:0 24px 60px;">
+    <p data-reveal style="text-align:center; font-size:14px; font-weight:600; letter-spacing:.04em; color:#8A8F9F; margin:0 0 22px;">整合與合作夥伴</p>
+    <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:14px;">
+      <div style="height:56px; border-radius:12px; background:#fff; border:1px solid #E6E8F0; display:flex; align-items:center; justify-content:center; color:#B4B8C6; font-family:'Sora'; font-weight:700; font-size:16px;">Northwind</div>
+      <div style="height:56px; border-radius:12px; background:#fff; border:1px solid #E6E8F0; display:flex; align-items:center; justify-content:center; color:#B4B8C6; font-family:'Sora'; font-weight:700; font-size:16px;">Contoso</div>
+      <div style="height:56px; border-radius:12px; background:#fff; border:1px solid #E6E8F0; display:flex; align-items:center; justify-content:center; color:#B4B8C6; font-family:'Sora'; font-weight:700; font-size:16px;">Fabrikam</div>
+      <div style="height:56px; border-radius:12px; background:#fff; border:1px solid #E6E8F0; display:flex; align-items:center; justify-content:center; color:#B4B8C6; font-family:'Sora'; font-weight:700; font-size:16px;">Adventure</div>
+      <div style="height:56px; border-radius:12px; background:#fff; border:1px solid #E6E8F0; display:flex; align-items:center; justify-content:center; color:#B4B8C6; font-family:'Sora'; font-weight:700; font-size:16px;">Proseware</div>
+      <div style="height:56px; border-radius:12px; background:#fff; border:1px solid #E6E8F0; display:flex; align-items:center; justify-content:center; color:#B4B8C6; font-family:'Sora'; font-weight:700; font-size:16px;">Tailwind</div>
+      <div style="height:56px; border-radius:12px; background:#fff; border:1px solid #E6E8F0; display:flex; align-items:center; justify-content:center; color:#B4B8C6; font-family:'Sora'; font-weight:700; font-size:16px;">Wingtip</div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#12131C; color:#C4C8D6;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 24px 28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:36px;">
+      <div style="grid-column:1 / -1; max-width:340px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="width:32px; height:32px; border-radius:9px; background:linear-gradient(135deg,var(--primary),var(--teal)); display:inline-flex; align-items:center; justify-content:center; color:#fff; font-family:'Sora'; font-weight:800; font-size:17px;">L</span>
+          <span style="font-family:'Sora'; font-weight:700; font-size:19px; color:#fff;">Lumina</span>
+        </div>
+        <p style="font-size:14px; line-height:1.7; color:#8A90A4; margin:14px 0 0;">官方資訊中心整理常用入口、常見問題與安全提醒,協助你快速找到需要的功能與教學。</p>
+        <div style="display:flex; gap:10px; margin-top:18px;">
+          <a href="#" aria-label="Instagram" style="width:38px; height:38px; border-radius:10px; background:#1E2030; display:flex; align-items:center; justify-content:center; color:#C4C8D6; font-size:13px; font-weight:700;" style-hover="background:var(--primary); color:#fff;">IG</a>
+          <a href="#" aria-label="Facebook" style="width:38px; height:38px; border-radius:10px; background:#1E2030; display:flex; align-items:center; justify-content:center; color:#C4C8D6; font-size:13px; font-weight:700;" style-hover="background:var(--primary); color:#fff;">FB</a>
+          <a href="#" aria-label="Line" style="width:38px; height:38px; border-radius:10px; background:#1E2030; display:flex; align-items:center; justify-content:center; color:#C4C8D6; font-size:13px; font-weight:700;" style-hover="background:var(--primary); color:#fff;">LN</a>
+          <a href="#" aria-label="Threads" style="width:38px; height:38px; border-radius:10px; background:#1E2030; display:flex; align-items:center; justify-content:center; color:#C4C8D6; font-size:13px; font-weight:700;" style-hover="background:var(--primary); color:#fff;">TH</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:14px; font-weight:700; color:#fff; margin:0 0 14px; letter-spacing:.02em;">產品</h4>
+        <div style="display:grid; gap:10px;">
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">產品總覽</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">方案與優惠</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">範本庫</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">案例</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:14px; font-weight:700; color:#fff; margin:0 0 14px; letter-spacing:.02em;">資源</h4>
+        <div style="display:grid; gap:10px;">
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">資源中心</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">最新文章</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">常見問題</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">安全與隱私</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:14px; font-weight:700; color:#fff; margin:0 0 14px; letter-spacing:.02em;">支援</h4>
+        <div style="display:grid; gap:10px;">
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">新手幫助</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">服務條款</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">聯絡我們</a>
+          <a href="#" style="font-size:14px; color:#8A90A4;" style-hover="color:#fff;">使用規範</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #22242F;">
+      <div style="max-width:1180px; margin:0 auto; padding:20px 24px; display:flex; flex-wrap:wrap; gap:10px 20px; align-items:center; justify-content:space-between; font-size:13px; color:#6B7186;">
+        <span>本站使用 HTTPS(TLS)加密傳輸,協助保護資料傳輸安全。</span>
+        <span>© 2026 Lumina 官方資訊中心 · All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING SUPPORT ============ -->
+  <button data-support-btn data-act="support" aria-label="線上客服" style="position:fixed; right:24px; bottom:24px; z-index:60; display:flex; align-items:center; gap:10px; padding:14px 20px; border:none; border-radius:999px; background:var(--primary); color:#fff; font-family:inherit; font-size:15px; font-weight:600; cursor:pointer; box-shadow:0 10px 30px rgba(47,75,224,.4);" style-hover="background:var(--primaryDark);">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span data-support-label>線上客服</span>
+  </button>
+
+  <!-- support popover -->
+  <div data-support-panel style="display:none; position:fixed; right:24px; bottom:88px; z-index:60; width:300px; background:#fff; border:1px solid #E6E8F0; border-radius:18px; box-shadow:0 20px 50px rgba(16,24,40,.22); overflow:hidden;">
+    <div style="background:linear-gradient(120deg,var(--primary),var(--teal)); padding:18px 20px; color:#fff;">
+      <div style="font-family:'Sora'; font-weight:700; font-size:17px;">線上客服</div>
+      <div style="font-size:13px; opacity:.9; margin-top:2px;">通常幾分鐘內回覆</div>
+    </div>
+    <div style="padding:16px; display:grid; gap:10px;">
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:12px; background:#F5F6FA;" style-hover="background:#EEF1FF;"><span style="width:34px; height:34px; border-radius:9px; background:#06C755; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px;">LN</span><span style="font-size:14.5px; font-weight:600; color:#1B1D29;">Line 線上諮詢</span></a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:12px; background:#F5F6FA;" style-hover="background:#EEF1FF;"><span style="width:34px; height:34px; border-radius:9px; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.2L4 17.2z"/></svg></span><span style="font-size:14.5px; font-weight:600; color:#1B1D29;">傳送訊息</span></a>
+      <a href="#" style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:12px; background:#F5F6FA;" style-hover="background:#EEF1FF;"><span style="width:34px; height:34px; border-radius:9px; background:#D97A2B; color:#fff; display:flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></span><span style="font-size:14.5px; font-weight:600; color:#1B1D29;">常見問題</span></a>
+    </div>
+  </div>
+
+</div>
+<script src="./lumina.js"></script>
+</body>
+</html>
