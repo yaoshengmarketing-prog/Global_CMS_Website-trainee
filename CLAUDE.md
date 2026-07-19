@@ -1,5 +1,9 @@
 # CLAUDE.md — Frontend Website Rules
 
+## Communication Language
+- Default to responding in Traditional Chinese (繁體中文) in the chat, regardless of session or who opens it, unless the user writes in another language or explicitly asks for a different one.
+- Code, file names, commit messages, and content pushed to the repo stay in their normal language (e.g. English for code) — this rule only affects the chat reply language.
+
 ## Always Do First
 - **Invoke the `frontend-design` skill** before writing any frontend code, every session, no exceptions.
 
